@@ -1,0 +1,25 @@
+server:
+  port: 8100
+#自定义name
+spring:
+  application:
+    name: Dept-Service
+  #consul的配置
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #注册到consul的服务名
+        service-name: Dept-consul
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#
+##eureka配置
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8000/eureka/
