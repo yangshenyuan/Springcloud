@@ -1,0 +1,19 @@
+server:
+  port: 8200
+
+spring:
+  application:
+    name: Emp-Service
+  #consul的配置
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #注册到consul的服务名
+        service-name: Emp-consul
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
