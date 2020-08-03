@@ -25,11 +25,11 @@ feign:
   hystrix:
     enabled: true
 #如果启动报错，找不到hystrix.stream，在你要监控的微服务加入如下配置。:
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
+management:
+ endpoints:
+   web:
+     exposure:
+       include: '*'
 
 
 #
