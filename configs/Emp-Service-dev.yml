@@ -17,3 +17,17 @@ management:
     web:
       exposure:
         include: "*"
+
+
+
+#监控的微服务配置
+#启用熔断器
+feign:
+  hystrix:
+    enabled: true
+#如果启动报错，找不到hystrix.stream，在你要监控的微服务加入如下配置。:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
